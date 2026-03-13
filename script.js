@@ -5,9 +5,30 @@
 
 /* ─── CUSTOM CURSOR ─── */
 const cursor = document.getElementById('cursor');
-document.addEventListener('mousemove', e => {
-  cursor.style.left = e.clientX + 'px';
-  cursor.style.top  = e.clientY + 'px';
+const hasFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+if (hasFinePointer && cursor) {
+  document.addEventListener('mousemove', e => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+  });
+
+  const interactiveElements = 'a, button, .menu-tab, .dish-card, input, select, textarea, label';
+  document.addEventListener('mouseover', e => {
+    if (e.target.closest(interactiveElements)) {
+      cursor.classList.add('cursor-hover');
+    }
+  });
+
+  document.addEventListener('mouseout', e => {
+    if (e.target.closest(interactiveElements)) {
+      cursor.classList.remove('cursor-hover');
+    }
+  });
+}
+
+document.querySelectorAll('a[href="#"]').forEach(anchor => {
+  anchor.addEventListener('click', e => e.preventDefault());
 });
 
 /* ─── NAVBAR SCROLL EFFECT ─── */
@@ -25,6 +46,10 @@ function showPage(page) {
   document.getElementById('page-' + page).classList.add('active');
   const navLink = document.getElementById('nav-' + page);
   if (navLink) navLink.classList.add('active');
+
+  document.querySelectorAll('.page-list-link').forEach(link => {
+    link.classList.toggle('active', link.textContent.trim().toLowerCase() === page);
+  });
 
   // Scroll to top smoothly
   window.scrollTo({ top: 0, behavior: 'smooth' });
