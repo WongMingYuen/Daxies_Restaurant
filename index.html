@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daxies — Fine Dining</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div id="cursor"></div>
+
+<!-- ─── NAVBAR ─── -->
+<nav id="navbar">
+  <a class="nav-logo" href="#" onclick="showPage('home')">DAX<span>IES</span></a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('home')"         class="active" id="nav-home">Home</a></li>
+    <li><a href="#" onclick="showPage('menu')"                        id="nav-menu">Menu</a></li>
+    <li><a href="#" onclick="showPage('about')"                       id="nav-about">About</a></li>
+    <li><a href="#" onclick="showPage('reservations')"                id="nav-reservations">Reservations</a></li>
+    <li><a href="#" onclick="showPage('contact')"                     id="nav-contact">Contact</a></li>
+  </ul>
+  <a href="#" class="nav-reserve" onclick="showPage('reservations'); return false;">Reserve a Table</a>
+</nav>
+
+
+<!-- ══════════════════════════════════
+     PAGE 1 — HOME
+══════════════════════════════════ -->
+<div id="page-home" class="page active">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-line-decor"></div>
+    <div class="deco-tl"></div>
+    <div class="deco-br"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. 2011 &nbsp;·&nbsp; New York City</p>
+      <h1 class="hero-title">
+        Daxies
+        <em>Fine Dining</em>
+      </h1>
+      <div class="hero-divider">
+        <span></span><i>✦</i><span></span>
+      </div>
+      <p class="hero-sub">Where culinary art meets timeless elegance</p>
+      <div class="hero-cta">
+        <a href="#" class="btn-primary" onclick="showPage('menu'); return false;">Explore Our Menu</a>
+        <a href="#" class="btn-outline" onclick="showPage('reservations'); return false;">Book a Table</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- INTRO / OUR STORY -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="intro-grid">
+
+        <!--
+          HOW TO ADD AN IMAGE HERE:
+          Replace <div class="intro-img">🍽</div>  with:
+          <img src="images/about-photo.jpg" class="intro-img" alt="Daxies dining room" />
+        -->
+        <div class="intro-img-wrap">
+          <div class="intro-img">🍽</div>
+        </div>
+
+        <div>
+          <p class="label">Our Story</p>
+          <div class="gold-rule"></div>
+          <h2 class="section-title">A Symphony of <em>Flavour &amp; Grace</em></h2>
+          <p class="section-body">
+            Founded in the heart of Manhattan, Daxies was born from a singular vision — to create a dining experience where every dish tells a story, every sip evokes memory, and every moment lingers long after the evening ends.
+          </p>
+          <p class="section-body">
+            Our award-winning kitchen blends classical French technique with bold global influences, honouring the finest seasonal ingredients with artistry and reverence.
+          </p>
+          <a href="#" class="btn-outline" onclick="showPage('about'); return false;">Our Philosophy</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES STRIP -->
+  <div class="features">
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🏆</div>
+        <div class="feature-name">Award Winning</div>
+        <div class="feature-desc">Two Michelin Stars &amp; James Beard recognised excellence since 2015</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🌿</div>
+        <div class="feature-name">Farm to Table</div>
+        <div class="feature-desc">Ingredients sourced daily from trusted local farms and artisan producers</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🍷</div>
+        <div class="feature-name">Curated Cellar</div>
+        <div class="feature-desc">Over 600 labels across four continents, guided by our master sommelier</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">✨</div>
+        <div class="feature-name">Private Dining</div>
+        <div class="feature-desc">Bespoke private rooms for intimate gatherings and exclusive celebrations</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SIGNATURE DISHES -->
+  <section class="section">
+    <div class="section-inner">
+      <p class="label" style="text-align:center; margin-bottom:.5rem;">Signature Creations</p>
+      <h2 class="section-title" style="text-align:center;">Dishes to <em>Remember</em></h2>
+      <div class="dishes-grid">
+
+        <!--
+          HOW TO ADD FOOD PHOTOS:
+          Change the inline style on .dish-bg from a gradient to:
+          style="background-image:url('images/duck.jpg'); background-size:cover; background-position:center;"
+        -->
+
+        <div class="dish-card">
+          <div class="dish-bg" style="background-image:url('images/duck.jpeg'); background-size:cover; background-position:center;"></div>
+          <div class="dish-overlay">
+            <p class="dish-tag">Chef's Signature</p>
+            <p class="dish-name">Seared Duck Magret</p>
+            <p class="dish-price">$58</p>
+          </div>
+        </div>
+
+        <div class="dish-card">
+          <div class="dish-bg" style="background-image:url('images/lobster.jpeg'); background-size:cover; background-position:center;"></div>
+          <div class="dish-overlay">
+            <p class="dish-tag">From the Sea</p>
+            <p class="dish-name">Lobster Bisque Royale</p>
+            <p class="dish-price">$48</p>
+          </div>
+        </div>
+
+        <div class="dish-card">
+          <div class="dish-bg" style="background-image:url('images/beef.jpeg'); background-size:cover; background-position:center;"></div>
+          <div class="dish-overlay">
+            <p class="dish-tag">Tasting Menu</p>
+            <p class="dish-name">Wagyu Tenderloin A5</p>
+            <p class="dish-price">$120</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <div class="testimonials">
+    <div class="testimonials-inner">
+      <p class="label">Guest Impressions</p>
+      <div class="quote-mark">"</div>
+      <p class="quote-text">Daxies is not merely a restaurant — it is a theatre of the senses. Every course arrived like a love letter written in flavour.</p>
+      <p class="quote-author">— Isabella Laurent, The Culinary Review</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">DAXIES</div>
+    <div class="footer-tagline">Fine Dining · Est. 2011 · New York</div>
+    <div class="footer-links">
+      <a href="#" onclick="showPage('home'); return false;">Home</a>
+      <a href="#" onclick="showPage('menu'); return false;">Menu</a>
+      <a href="#" onclick="showPage('about'); return false;">About</a>
+      <a href="#" onclick="showPage('reservations'); return false;">Reservations</a>
+      <a href="#" onclick="showPage('contact'); return false;">Contact</a>
+    </div>
+    <div class="footer-copy">© 2025 Daxies Fine Dining. All rights reserved.</div>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════════
+     PAGE 2 — MENU
+══════════════════════════════════ -->
+<div id="page-menu" class="page">
+  <div class="page-hero">
+    <p class="label">Crafted with Intention</p>
+    <h1 class="page-hero-title">Our Menu</h1>
+    <p class="page-hero-sub">Seasonal · Artisanal · Unforgettable</p>
+  </div>
+
+  <div class="menu-tabs" style="max-width:800px; padding:0 5vw; margin:3rem auto;">
+    <button class="menu-tab active" onclick="switchMenu('starters', this)">Starters</button>
+    <button class="menu-tab"        onclick="switchMenu('mains', this)">Mains</button>
+    <button class="menu-tab"        onclick="switchMenu('desserts', this)">Desserts</button>
+    <button class="menu-tab"        onclick="switchMenu('wines', this)">Wine List</button>
+  </div>
+
+  <div id="menu-starters" class="menu-section active">
+    <div class="menu-category">
+      <h3 class="menu-category-title">Cold Starters</h3>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Oscietra Caviar</div><div class="menu-item-desc">30g Oscietra, crème fraîche, blinis, chives</div></div><div class="menu-item-price">$95</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Tuna Tataki</div><div class="menu-item-desc">Seared yellowfin tuna, yuzu ponzu, micro shiso, toasted sesame</div></div><div class="menu-item-price">$42</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Heritage Tomato Salad</div><div class="menu-item-desc">Heirloom tomatoes, burrata, aged balsamic, basil oil</div></div><div class="menu-item-price">$28</div></div>
+    </div>
+    <div class="menu-category">
+      <h3 class="menu-category-title">Warm Starters</h3>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Foie Gras Torchon</div><div class="menu-item-desc">Pan-seared foie gras, brioche, fig compote, aged Sauternes reduction</div></div><div class="menu-item-price">$68</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Lobster Bisque Royale</div><div class="menu-item-desc">Cognac-flamed Maine lobster bisque, tarragon cream, claw medallion</div></div><div class="menu-item-price">$48</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Truffle Arancini</div><div class="menu-item-desc">Black truffle risotto balls, aged parmesan foam, herb oil</div></div><div class="menu-item-price">$36</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Wild Mushroom Velouté</div><div class="menu-item-desc">Porcini &amp; chanterelle cream, truffle oil, sourdough crisp</div></div><div class="menu-item-price">$32</div></div>
+    </div>
+  </div>
+
+  <div id="menu-mains" class="menu-section">
+    <div class="menu-category">
+      <h3 class="menu-category-title">From the Land</h3>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Wagyu Tenderloin A5</div><div class="menu-item-desc">Japanese A5 Wagyu, potato pavé, black garlic purée, port jus</div></div><div class="menu-item-price">$120</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Seared Duck Magret</div><div class="menu-item-desc">Duck breast, cherry and star anise reduction, celeriac mousseline</div></div><div class="menu-item-price">$58</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Rack of Colorado Lamb</div><div class="menu-item-desc">Herb-crusted rack, Provençal tian, rosemary jus, anchovy butter</div></div><div class="menu-item-price">$78</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Free-Range Chicken Ballotine</div><div class="menu-item-desc">Truffle-stuffed ballotine, pearl onions, morel cream, asparagus</div></div><div class="menu-item-price">$52</div></div>
+    </div>
+    <div class="menu-category">
+      <h3 class="menu-category-title">From the Sea</h3>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Whole Dover Sole</div><div class="menu-item-desc">Meunière butter, capers, lemon, parsley, pomme purée</div></div><div class="menu-item-price">$88</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Pan-Roasted Halibut</div><div class="menu-item-desc">Wild halibut, saffron beurre blanc, fennel confit, sea vegetables</div></div><div class="menu-item-price">$64</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Scallop &amp; Cauliflower</div><div class="menu-item-desc">Diver scallops, cauliflower three ways, Champagne velouté, caviar</div></div><div class="menu-item-price">$72</div></div>
+    </div>
+  </div>
+
+  <div id="menu-desserts" class="menu-section">
+    <div class="menu-category">
+      <h3 class="menu-category-title">Sweet Finales</h3>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Valrhona Chocolate Soufflé</div><div class="menu-item-desc">Warm dark chocolate soufflé, Tahitian vanilla ice cream — allow 20 minutes</div></div><div class="menu-item-price">$24</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Crème Brûlée Classique</div><div class="menu-item-desc">Madagascar vanilla custard, caramelised crust, seasonal berries</div></div><div class="menu-item-price">$18</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Mille-Feuille</div><div class="menu-item-desc">Caramelised puff pastry, diplomat cream, raspberry coulis, gold leaf</div></div><div class="menu-item-price">$22</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Cheese Selection</div><div class="menu-item-desc">Eight artisan cheeses, quince paste, walnut bread, honeycomb</div></div><div class="menu-item-price">$38</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Petit Fours</div><div class="menu-item-desc">Chef's selection of handmade chocolates, macarons &amp; confections</div></div><div class="menu-item-price">$16</div></div>
+    </div>
+  </div>
+
+  <div id="menu-wines" class="menu-section">
+    <div class="menu-category">
+      <h3 class="menu-category-title">Champagne &amp; Sparkling</h3>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Krug Grande Cuvée</div><div class="menu-item-desc">NV · Reims, France</div></div><div class="menu-item-price">$38 / glass</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Dom Pérignon Vintage</div><div class="menu-item-desc">2015 · Épernay, France</div></div><div class="menu-item-price">$420 / bottle</div></div>
+    </div>
+    <div class="menu-category">
+      <h3 class="menu-category-title">Red Wines</h3>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Château Pétrus</div><div class="menu-item-desc">2016 · Pomerol, Bordeaux</div></div><div class="menu-item-price">$980 / bottle</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Opus One</div><div class="menu-item-desc">2019 · Napa Valley, California</div></div><div class="menu-item-price">$420 / bottle</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Barolo Riserva DOCG</div><div class="menu-item-desc">2017 · Piedmont, Italy</div></div><div class="menu-item-price">$22 / glass</div></div>
+    </div>
+    <div class="menu-category">
+      <h3 class="menu-category-title">White Wines</h3>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Puligny-Montrachet 1er Cru</div><div class="menu-item-desc">2020 · Burgundy, France</div></div><div class="menu-item-price">$24 / glass</div></div>
+      <div class="menu-item"><div class="menu-item-info"><div class="menu-item-name">Chablis Grand Cru</div><div class="menu-item-desc">2021 · Chablis, France</div></div><div class="menu-item-price">$18 / glass</div></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">DAXIES</div>
+    <div class="footer-tagline">Fine Dining · Est. 2011 · New York</div>
+    <div class="footer-copy">© 2025 Daxies Fine Dining. All rights reserved.</div>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════════
+     PAGE 3 — ABOUT
+══════════════════════════════════ -->
+<div id="page-about" class="page">
+  <div class="page-hero">
+    <p class="label">Who We Are</p>
+    <h1 class="page-hero-title">Our Story</h1>
+    <p class="page-hero-sub">Passion · Heritage · Excellence</p>
+  </div>
+
+  <div class="about-story">
+    <div>
+      <p class="label">The Beginning</p>
+      <div class="gold-rule"></div>
+      <h2 class="section-title">Born from a <em>Lifelong Passion</em></h2>
+      <p class="section-body">In 2011, Chef Édouard Dax opened the doors of Daxies with a singular dream — to make every guest feel like royalty. Trained under the legendary kitchens of Paris and Tokyo, Édouard fused worlds together, creating a language of food both bold and intimate.</p>
+      <p class="section-body">What began as a 30-seat neighbourhood bistro has grown into one of Manhattan's most celebrated dining institutions, earning two Michelin stars in 2016 and numerous James Beard nominations.</p>
+    </div>
+    <div class="about-quote">
+      "Cooking is not just sustenance. It is memory made tangible — the warmth of a grandmother's kitchen, the thrill of a foreign market, the silence of tasting something extraordinary for the first time."
+      <div style="font-family:'Cinzel';font-size:.6rem;letter-spacing:.2em;color:var(--gold);margin-top:1.2rem;">— Chef Édouard Dax</div>
+    </div>
+  </div>
+
+  <div class="stats-row" style="max-width:900px; margin:0 auto;">
+    <div class="stat-box"><div class="stat-num">2★</div><div class="stat-label">Michelin Stars</div></div>
+    <div class="stat-box"><div class="stat-num">14</div><div class="stat-label">Years of Excellence</div></div>
+    <div class="stat-box"><div class="stat-num">600+</div><div class="stat-label">Wines in our Cellar</div></div>
+  </div>
+
+  <div class="team-section">
+    <p class="label" style="text-align:center; margin-bottom:.5rem;">The People Behind the Magic</p>
+    <h2 class="section-title" style="text-align:center;">Meet Our <em>Team</em></h2>
+    <div class="team-grid">
+
+      <!--
+        HOW TO ADD TEAM PHOTOS:
+        Inside .team-avatar, replace the emoji with:
+        <img src="images/chef.jpeg" alt="Chef Édouard"
+             style="width:100%; height:100%; object-fit:cover; border-radius:50%;" />
+      -->
+
+      <div class="team-card">
+        <div class="team-avatar">👨‍🍳</div>
+        <div class="team-name">Édouard Dax</div>
+        <div class="team-role">Executive Chef &amp; Founder</div>
+        <div class="team-bio">Trained in Paris under Alain Ducasse and in Tokyo under Seiji Yamamoto, Édouard brings twenty years of mastery to every plate. His philosophy: let the ingredient speak.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">👩‍🍳</div>
+        <div class="team-name">Sofia Marchetti</div>
+        <div class="team-role">Head Pastry Chef</div>
+        <div class="team-bio">A graduate of Le Cordon Bleu Paris, Sofia's desserts are edible architecture — delicate, precise, and impossible to forget. Her soufflés have their own cult following.</div>
+      </div>
+      <div class="team-card">
+        <div class="team-avatar">🍷</div>
+        <div class="team-name">James Holloway</div>
+        <div class="team-role">Master Sommelier</div>
+        <div class="team-bio">One of only 273 Master Sommeliers worldwide, James curates our 600-bottle cellar with obsessive care, pairing each dish with a narrative told through wine.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">DAXIES</div>
+    <div class="footer-tagline">Fine Dining · Est. 2011 · New York</div>
+    <div class="footer-copy">© 2025 Daxies Fine Dining. All rights reserved.</div>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════════
+     PAGE 4 — RESERVATIONS
+══════════════════════════════════ -->
+<div id="page-reservations" class="page">
+  <div class="page-hero">
+    <p class="label">We Look Forward to Welcoming You</p>
+    <h1 class="page-hero-title">Reservations</h1>
+    <p class="page-hero-sub">Tables available Tuesday through Sunday</p>
+  </div>
+
+  <div class="hours-grid">
+    <div class="hours-title">DINING HOURS</div>
+    <div class="hours-row"><span class="hours-day">Monday</span><span class="hours-time">Closed</span></div>
+    <div class="hours-row"><span class="hours-day">Tuesday – Thursday</span><span class="hours-time">6:00 PM – 10:30 PM</span></div>
+    <div class="hours-row"><span class="hours-day">Friday – Saturday</span><span class="hours-time">5:30 PM – 11:00 PM</span></div>
+    <div class="hours-row"><span class="hours-day">Sunday</span><span class="hours-time">5:00 PM – 9:30 PM</span></div>
+  </div>
+
+  <div class="reservation-wrap">
+    <p class="label" style="text-align:center; margin-bottom:2rem;">Reservation Request</p>
+
+    <div id="reservationForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label class="form-label">First Name</label>
+          <input class="form-input" type="text" placeholder="Your first name" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Last Name</label>
+          <input class="form-input" type="text" placeholder="Your last name" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email Address</label>
+          <input class="form-input" type="email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone Number</label>
+          <input class="form-input" type="tel" placeholder="+1 (000) 000-0000" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Preferred Date</label>
+          <input class="form-input" type="date" />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Preferred Time</label>
+          <select class="form-select">
+            <option value="">Select a time</option>
+            <option>5:30 PM</option><option>6:00 PM</option><option>6:30 PM</option>
+            <option>7:00 PM</option><option>7:30 PM</option><option>8:00 PM</option>
+            <option>8:30 PM</option><option>9:00 PM</option><option>9:30 PM</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Number of Guests</label>
+          <select class="form-select">
+            <option>1 Guest</option><option>2 Guests</option><option>3 Guests</option>
+            <option>4 Guests</option><option>5 Guests</option><option>6 Guests</option>
+            <option>7+ Guests (Private Dining)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Occasion</label>
+          <select class="form-select">
+            <option>No special occasion</option>
+            <option>Birthday Celebration</option><option>Anniversary</option>
+            <option>Business Dinner</option><option>Marriage Proposal</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label class="form-label">Special Requests &amp; Dietary Requirements</label>
+          <textarea class="form-textarea" rows="4" placeholder="Please let us know of any allergies, dietary restrictions, or special requests..."></textarea>
+        </div>
+      </div>
+      <p class="form-note">Reservations are confirmed within 24 hours by email. For same-day reservations or parties of 7 or more, please call us directly at +1 (212) 555-0193. A credit card is required to secure your booking.</p>
+      <button class="form-submit" onclick="submitReservation()">Request Reservation</button>
+    </div>
+
+    <div class="success-msg" id="successMsg">
+      <h3>Thank You ✦</h3>
+      <p>Your reservation request has been received. We will confirm your table within 24 hours via email. We look forward to welcoming you to Daxies.</p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">DAXIES</div>
+    <div class="footer-tagline">Fine Dining · Est. 2011 · New York</div>
+    <div class="footer-copy">© 2025 Daxies Fine Dining. All rights reserved.</div>
+  </footer>
+</div>
+
+
+<!-- ══════════════════════════════════
+     PAGE 5 — CONTACT
+══════════════════════════════════ -->
+<div id="page-contact" class="page">
+  <div class="page-hero">
+    <p class="label">Find Us</p>
+    <h1 class="page-hero-title">Contact</h1>
+    <p class="page-hero-sub">We'd love to hear from you</p>
+  </div>
+
+  <div class="contact-layout">
+    <div>
+      <p class="label" style="margin-bottom:2rem;">Get in Touch</p>
+      <div class="contact-info-block">
+        <div class="contact-info-label">Address</div>
+        <div class="contact-info-val">48 East 52nd Street<br>Midtown Manhattan, New York, NY 10022</div>
+      </div>
+      <div class="contact-info-block">
+        <div class="contact-info-label">Reservations</div>
+        <div class="contact-info-val"><a href="tel:+12125550193">+1 (212) 555-0193</a></div>
+      </div>
+      <div class="contact-info-block">
+        <div class="contact-info-label">Email</div>
+        <div class="contact-info-val"><a href="mailto:hello@daxies.com">hello@daxies.com</a></div>
+      </div>
+      <div class="contact-info-block">
+        <div class="contact-info-label">Private Dining &amp; Events</div>
+        <div class="contact-info-val">
+          <a href="mailto:events@daxies.com">events@daxies.com</a><br>
+          <a href="tel:+12125550197">+1 (212) 555-0197</a>
+        </div>
+      </div>
+      <div class="contact-info-block">
+        <div class="contact-info-label">Follow Us</div>
+        <div class="social-row">
+          <a class="social-btn" href="#">Instagram</a>
+          <a class="social-btn" href="#">Facebook</a>
+          <a class="social-btn" href="#">TripAdvisor</a>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="map-placeholder">
+        <div class="map-icon">📍</div>
+        <div>48 East 52nd Street, Manhattan</div>
+        <div style="font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;opacity:.6">New York, NY 10022</div>
+      </div>
+      <div style="margin-top:2rem;">
+        <div class="contact-info-label" style="margin-bottom:1rem;">Nearby</div>
+        <div style="font-size:.82rem;color:rgba(242,224,200,.55);line-height:2;">
+          🚇 &nbsp;Lexington Ave / 51st St (6 train) — 2 min walk<br>
+          🚇 &nbsp;5th Ave / 53rd St (E,M trains) — 4 min walk<br>
+          🅿️ &nbsp;Valet parking available nightly from 5 PM<br>
+          ✈️ &nbsp;JFK Airport — 35 min · LGA Airport — 25 min
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-logo">DAXIES</div>
+    <div class="footer-tagline">Fine Dining · Est. 2011 · New York</div>
+    <div class="footer-links">
+      <a href="#" onclick="showPage('home'); return false;">Home</a>
+      <a href="#" onclick="showPage('menu'); return false;">Menu</a>
+      <a href="#" onclick="showPage('about'); return false;">About</a>
+      <a href="#" onclick="showPage('reservations'); return false;">Reservations</a>
+      <a href="#" onclick="showPage('contact'); return false;">Contact</a>
+    </div>
+    <div class="footer-copy">© 2025 Daxies Fine Dining. All rights reserved.</div>
+  </footer>
+</div>
+
+
+<!-- JavaScript — loaded at the bottom for performance -->
+<script src="script.js"></script>
+
+</body>
+</html>
